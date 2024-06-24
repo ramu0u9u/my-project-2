@@ -13,9 +13,11 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: SonarQube Scan
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Ensure SONAR_TOKEN matches the name of your GitHub secret
-        SONAR_HOST_URL: http://13.232.125.37:9000/  # Replace with your SonarQube server URL
-      run: mvn sonar:sonar
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Ensure SONAR_TOKEN matches the name of your GitHub secret
+          SONAR_HOST_URL: http://13.232.125.37:9000/  # Replace with your SonarQube server URL
+        run: mvn sonar:sonar
