@@ -10,11 +10,17 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.edw</groupId>
-    <artifactId>hello-world-docker</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>HelloWorldDocker</name>
-    <description>Demonstrate how to deploy java app on Docker and Openshift</description>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <!-- SonarQube configuration -->
+    <sonar.host.url>http://15.206.73.255:9000/</sonar.host.url>
+    <sonar.login>squ_58cef1fbd4bfece94fe51f85b8617fa214f319d2</sonar.login>
+    <sonar.projectKey>jenkins</sonar.projectKey>
+    <sonar.projectName>demo</sonar.projectName>
+    <sonar.projectVersion>1.0-SNAPSHOT</sonar.projectVersion>
+  </properties>
 
     <properties>
         <java.version>11</java.version>
