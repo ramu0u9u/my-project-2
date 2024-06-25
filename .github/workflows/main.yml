@@ -1,4 +1,4 @@
-name: Build
+name: CI-CD Pipeline
 on:
   push:
     branches:
@@ -49,7 +49,7 @@ jobs:
       - name: SSH into EC2 instance and pull Docker image
         uses: appleboy/ssh-action@master
         with:
-          host: 65.0.203.117
+          host: 13.232.119.224
           username: ubuntu  # Replace with your EC2 instance username
           key: ${{ secrets.SSH_PRIVATE_KEY }}  # Add your SSH private key as a secret
           script: |
