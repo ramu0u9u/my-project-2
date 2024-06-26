@@ -64,7 +64,7 @@ jobs:
       - name: SSH into EC2 instance and pull Docker image
         uses: appleboy/ssh-action@master
         with:
-          host: 13.233.232.183
+          host: 13.126.129.23
           username: ubuntu  # Replace with your EC2 instance username
           key: ${{ secrets.SSH_PRIVATE_KEY }}  # Add your SSH private key as a secret
           script: |
